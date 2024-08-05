@@ -26,7 +26,8 @@ export function showError(error) {
 }
 
 
-    export function renderGallery(hits)   { // Приймаємо масив hits
+// 
+    export function renderGallery(hits)   { 
   
     const images = hits.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) =>`
     <li class="gallery-item">
@@ -46,6 +47,7 @@ export function showError(error) {
 
       document.querySelector('.gallery-list').insertAdjacentHTML("beforeend", images);
     lightbox.refresh(); // Оновлення Lightbox
+
 }
 
 export function cleanGallery() {

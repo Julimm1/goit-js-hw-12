@@ -37,15 +37,7 @@ loadMoreBtn.addEventListener('click', async () => {
     await fetchImages();
 });
 
-function scrollPage() {
 
-    const { height: cardHeight } = gallery.getBoundingClientRect();
-                window.scrollBy({
-                    top: cardHeight * 2, 
-                    behavior: 'smooth'
-                });
-    
-}
 
 
     
@@ -81,4 +73,12 @@ async function fetchImages() {
     }
 }
 
+function scrollPage() {
 
+    const { height: cardHeight } = gallery.getBoundingClientRect();
+                window.scrollBy({
+                    top: cardHeight * 2, 
+                    behavior: 'smooth'
+                });
+    
+}
