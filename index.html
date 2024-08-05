@@ -5,14 +5,14 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
-    
     <script type="module" crossorigin src="/goit-js-hw-12/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-8c59ed88.js">
-    <link rel="stylesheet" href="/goit-js-hw-12/assets/vendor-1cd1f9d9.css">
-    <link rel="stylesheet" href="/goit-js-hw-12/assets/index-b91ddd2d.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-BPs2jpei.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-DumFYO8Z.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-Dznz8UWA.css">
   </head>
   <body>
     <div class="container">
+      <!-- Форма запиту -->
       <form id="searchForm" class="gallery-form">
         <input
           type="text"
@@ -22,14 +22,24 @@
         />
         <button type="submit">Search</button>
       </form>
+      <button type="button" class="load-btn hidden">Load more</button>
       <span class="loading hidden"
         >Loading images, please wait...
         <span class="loader"></span>
       </span>
+      <!-- Галерея -->
       <div class="gallery">
         <ul class="gallery-list"></ul>
       </div>
     </div>
-    
+    <!-- Кнопка завантажити ще -->
+    <button type="button" class="btn button hidden" data-action="load-more">
+      Load more
+    </button>
+    <!-- Спінер -->
+    <span class="loading hidden"
+      >Loading images, please wait...
+      <span class="loader"></span>
+    </span>
   </body>
 </html>
