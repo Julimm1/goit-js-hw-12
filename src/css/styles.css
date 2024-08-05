@@ -9,7 +9,7 @@
 
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -93,6 +93,22 @@ button {
 
 button:hover,
 button:focus {
+  background: #6c8cff;
+  color: #fff;
+}
+
+.btn {
+  min-width: 125px;
+  margin: 32px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+
+btn:hover,
+btn:focus {
   background: #6c8cff;
   color: #fff;
 }
@@ -229,3 +245,4 @@ button:focus {
   letter-spacing: 0.04em;
   color: #2e2f42;
 }
+

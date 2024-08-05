@@ -26,7 +26,6 @@ export function showError(error) {
 }
 
 
-// 
     export function renderGallery(hits)   { // Приймаємо масив hits
   
     const images = hits.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) =>`
@@ -46,11 +45,7 @@ export function showError(error) {
     </li>`).join('');
 
       document.querySelector('.gallery-list').insertAdjacentHTML("beforeend", images);
-      
-     
-
     lightbox.refresh(); // Оновлення Lightbox
-    
 }
 
 export function cleanGallery() {

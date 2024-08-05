@@ -9,6 +9,7 @@
   </head>
   <body>
     <div class="container">
+      <!-- Форма запиту -->
       <form id="searchForm" class="gallery-form">
         <input
           type="text"
@@ -18,14 +19,25 @@
         />
         <button type="submit">Search</button>
       </form>
+      <button type="button" class="load-btn hidden">Load more</button>
       <span class="loading hidden"
         >Loading images, please wait...
         <span class="loader"></span>
       </span>
+      <!-- Галерея -->
       <div class="gallery">
         <ul class="gallery-list"></ul>
       </div>
     </div>
+    <!-- Кнопка завантажити ще -->
+    <button type="button" class="btn button hidden" data-action="load-more">
+      Load more
+    </button>
+    <!-- Спінер -->
+    <span class="loading hidden"
+      >Loading images, please wait...
+      <span class="loader"></span>
+    </span>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
