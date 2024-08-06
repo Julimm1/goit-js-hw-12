@@ -34,6 +34,7 @@ let currentPage = 1;
 }); 
 
 loadMoreBtn.addEventListener('click', async () => {
+    currentPage++;
     await fetchImages();
 });
 
@@ -54,7 +55,11 @@ async function fetchImages() {
         } else {
             renderGallery(data.hits);
             if (currentPage > 1) {
-                scrollPage()
+                  const { height: cardHeight } = document.querySelector('.gallery-item').getBoundingClientRect();
+                window.scrollBy({
+                    top: cardHeight * 2, 
+                    behavior: 'smooth'
+                });
             }
             if (data.hits.length < resultsPerPage || data.totalHits <= currentPage * resultsPerPage) { 
                 loadMoreBtn.classList.add('hidden'); 
@@ -70,15 +75,8 @@ async function fetchImages() {
         showError(error.message);
     } finally {
         searchLoader.classList.add("hidden"); 
+        
     }
 }
 
-function scrollPage() {
 
-    const { height: cardHeight } = gallery.getBoundingClientRect();
-                window.scrollBy({
-                    top: cardHeight * 2, 
-                    behavior: 'smooth'
-                });
-    
-}
