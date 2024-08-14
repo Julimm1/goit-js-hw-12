@@ -30,11 +30,11 @@ let currentPage = 1;
     cleanGallery(); 
       loadMoreBtn.classList.add('hidden');
 
-    await fetchImages();
+      await fetchImages();
+      searchInput.value = '';  // Скидання значення поля вводу
 }); 
 
 loadMoreBtn.addEventListener('click', async () => {
-    currentPage++;
     await fetchImages();
 });
 
@@ -54,6 +54,7 @@ async function fetchImages() {
             showError('Sorry, there are no images matching your search query. Please try again!')
         } else {
             renderGallery(data.hits);
+            currentPage += 1;  // Збільшуємо після отримання результатів
             if (currentPage > 1) {
                   const { height: cardHeight } = document.querySelector('.gallery-item').getBoundingClientRect();
                 window.scrollBy({
